@@ -1,0 +1,62 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
+const bcrypt = require('bcrypt');
+const {SALT}= require('../config/serverconfig');
+
+module.exports = (sequelize, DataTypes) => {
+  class Hospital extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      this.hasMany(models.Medicine, {
+        foreignKey: 'hospitalId'
+      });
+    }
+  }
+  Hospital.init({
+    name: {
+      type:DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type:DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      }
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [3, 100]
+      }
+    },
+    address: {
+      type:DataTypes.STRING
+    },
+    isVerified: {
+      type:DataTypes.BOOLEAN,
+      defaultValue: false
+    },
+    hospitalCode: {
+      type:DataTypes.STRING,
+      allowNull: false,
+    }
+      ,
+  }, {
+    sequelize,
+    modelName: 'Hospital',
+  });
+  Hospital.beforeCreate((hospital)=>{
+    const encryptedPassword = bcrypt.hashSync(hospital.password,SALT);
+    hospital.password=encryptedPassword;
+  });
+  return Hospital;
+};

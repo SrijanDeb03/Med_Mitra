@@ -1,0 +1,18 @@
+# Python specific
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.pytest_cache/
+
+# Data and Models
+uploads/
+inspection_log.json
+*.pt
+*.onnx
+
+# OS files
+.DS_Store
+Thumbs.db
