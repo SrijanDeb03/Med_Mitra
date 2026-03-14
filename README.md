@@ -55,8 +55,8 @@
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/yourusername/medsecure.git
-cd medsecure
+git clone https://github.com/yourusername/Med_Mitra.git
+cd Med_Mitra
 
 # 2. Start Auth Backend (Node.js)
 cd backend/node
