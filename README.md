@@ -1,43 +1,44 @@
-# 💊 Medicine-Quality-Inspection-Web-App-using-YOLOv8-GenAI
+# 💊 MedSecure - Intelligent Medicine Quality & Inventory Management
 
-**MedSecure** is a cutting-edge web application that uses AI and computer vision to **inspect the quality of medicines in real-time** using your webcam. This tool helps users ensure the safety of pharmaceutical products by checking for **physical damage, expiry dates, and packaging authenticity** — all in one click.
+**MedSecure** is a comprehensive web application powered by cutting-edge AI (YOLOv8 + GenAI) and built on a secure NodeJS/FastAPI backend. It’s designed to ensure the safety of pharmaceutical products via visual damage inspection, intelligent medicine purpose discovery, and automated inventory data extraction directly from packaging.
 
 ---
 
 ## 🚀 Features
 
-🔍 **Real-Time Visual Inspection**  
-Detects broken strips, faded labels, and suspicious packaging using YOLOv8.
+### 🔍 Real-Time Visual Damage Inspection
+- Ensure medicine safety before consumption or restocking.
+- Detects broken strips, faded labels, and suspicious packaging automatically using YOLOv8.
+- Analyzes results and delivers an expert verdict (✅ **Acceptable** | ❌ **Not Acceptable**) powered by **Gemini 2.5 Flash**.
 
-📅 **Expiry & Batch Detection**  
-Extracts expiry and batch information from packaging using advanced OCR.
+### 💡 Purpose Discovery & Safety Warnings
+- Upload an image of a medicine package to automatically identify the medicine name and find out its **Primary Purpose**.
+- Extracts critical **Usage Instructions** and **Safety Warnings** instantly.
 
-🧠 **GenAI Commentary (GPT-4 Vision)**  
-Provides human-like analysis of the medicine's condition, including a summary verdict:  
-✅ Acceptable | ❌ Not Acceptable
+### 📦 Smart Inventory Extraction (Adding Medicines)
+- Automate manual data entry when onboarding new medicines.
+- Upload packaging photos to accurately extract structured details:
+  - Medicine Name & Manufacturer
+  - **Batch Number** & **Expiry Date**
+  - Quantity & Price
 
-📷 **Webcam Integration**  
-Capture images directly from your webcam — supports both manual and auto capture.
+### 📊 Comprehensive Dashboard & Reporting
+- Maintain organized records of your medicine inventory.
+- Track real-time inspection outcomes with timestamped logs.
+- Generate and download PDF reports directly from the UI.
 
-🧾 **Inspection Logs**  
-Keep track of previous inspections with timestamped reports.
-
----
-
-## 📸 Live Demo
-
-> Coming Soon... 🔗 *(Optional: Link to a hosted version or video demo)*
+### 🔐 Secure User Authentication
+- Complete Login and Registration flow.
+- Fast and secure user management powered by Node.js, Express, and MySQL (Sequelize).
 
 ---
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React.js + TailwindCSS + Vite
-- **Backend**: FastAPI (Python)
-- **AI Models**:  
-  - YOLOv8 (damage detection)  
-  - Tesseract OCR (expiry & batch)  
-  - GPT-4 Vision / Gemini Pro (GenAI reasoning)
+- **Frontend**: React.js, Vite, TailwindCSS, Recharts
+- **AI/ML Backend (Python)**: FastAPI, YOLOv8, Tesseract OCR, Google Generative AI (Gemini 2.5 Flash), OpenCV
+- **Authentication & Database Backend (Node.js)**: Node.js, Express, Sequelize, MySQL
+- **Other Tools**: JWT Auth, jsPDF (PDF reports)
 
 ---
 
@@ -46,8 +47,9 @@ Keep track of previous inspections with timestamped reports.
 ### Prerequisites
 - Node.js & npm
 - Python 3.9+
-- OpenCV, Ultralytics, Tesseract
-- (Optional) GPT-4V API access
+- Tesseract OCR installed locally (`C:\Program Files\Tesseract-OCR\tesseract.exe`)
+- MySQL database server running
+- API Keys setup in respective `.env` files (e.g., `GOOGLE_API_KEY`)
 
 ### Clone & Run
 
@@ -56,12 +58,18 @@ Keep track of previous inspections with timestamped reports.
 git clone https://github.com/yourusername/medsecure.git
 cd medsecure
 
-# 2. Start backend
-cd backend
+# 2. Start Auth Backend (Node.js)
+cd backend/node
+npm install
+npm run dev
+
+# 3. Start AI/ML Backend (FastAPI Python)
+cd ../python
 pip install -r requirements.txt
 uvicorn main:app --reload
 
-# 3. Start frontend
-cd ../frontend
+# 4. Start Frontend (React/Vite)
+cd ../../frontend
 npm install
 npm run dev
+```

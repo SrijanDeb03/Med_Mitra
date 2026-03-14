@@ -1,0 +1,146 @@
+[
+    {
+        "image": "WhatsApp Image 2026-03-14 at 19.39.20.jpeg",
+        "measurements": {
+            "OCR": {
+                "time_seconds": 2.5568509101867676,
+                "cpu_percent": 10.5875,
+                "memory_mb": 333.421875
+            },
+            "YOLO": {
+                "time_seconds": 0.2834188938140869,
+                "cpu_percent": 70.3625,
+                "memory_mb": 361.15234375,
+                "num_detections": 0
+            },
+            "GeminiAPI": {
+                "time_seconds": 3.2293245792388916,
+                "cpu_percent": 4.425,
+                "memory_mb": 361.6171875
+            },
+            "TotalProcessing": {
+                "time_seconds": 6.0702056884765625
+            }
+        }
+    },
+    {
+        "image": "WhatsApp Image 2026-03-14 at 19.40.03.jpeg",
+        "measurements": {
+            "OCR": {
+                "time_seconds": 1.234090805053711,
+                "cpu_percent": 11.2375,
+                "memory_mb": 335.5546875
+            },
+            "YOLO": {
+                "time_seconds": 0.13486838340759277,
+                "cpu_percent": 84.5,
+                "memory_mb": 361.921875,
+                "num_detections": 2
+            },
+            "GeminiAPI": {
+                "time_seconds": 8.046635627746582,
+                "cpu_percent": 1.775,
+                "memory_mb": 362.43359375
+            },
+            "TotalProcessing": {
+                "time_seconds": 9.415594816207886
+            }
+        }
+    },
+    {
+        "image": "WhatsApp Image 2026-03-14 at 22.28.21 1.jpeg",
+        "measurements": {
+            "OCR": {
+                "time_seconds": 10.21847128868103,
+                "cpu_percent": 11.6625,
+                "memory_mb": 357.984375
+            },
+            "YOLO": {
+                "time_seconds": 0.18569588661193848,
+                "cpu_percent": 78.3375,
+                "memory_mb": 403.1484375,
+                "num_detections": 1
+            },
+            "GeminiAPI": {
+                "time_seconds": 1.0522010326385498,
+                "cpu_percent": 14.3375,
+                "memory_mb": 405.56640625
+            },
+            "TotalProcessing": {
+                "time_seconds": 11.456368207931519
+            }
+        }
+    },
+    {
+        "image": "WhatsApp Image 2026-03-14 at 22.28.21 2.jpeg",
+        "measurements": {
+            "OCR": {
+                "time_seconds": 4.255510568618774,
+                "cpu_percent": 11.4,
+                "memory_mb": 340.8203125
+            },
+            "YOLO": {
+                "time_seconds": 0.16833758354187012,
+                "cpu_percent": 79.4875,
+                "memory_mb": 376.5546875,
+                "num_detections": 0
+            },
+            "GeminiAPI": {
+                "time_seconds": 1.0258781909942627,
+                "cpu_percent": 13.65,
+                "memory_mb": 377.3671875
+            },
+            "TotalProcessing": {
+                "time_seconds": 5.449726343154907
+            }
+        }
+    },
+    {
+        "image": "WhatsApp Image 2026-03-14 at 22.28.21.jpeg",
+        "measurements": {
+            "OCR": {
+                "time_seconds": 3.692288637161255,
+                "cpu_percent": 11.125,
+                "memory_mb": 339.296875
+            },
+            "YOLO": {
+                "time_seconds": 0.14980340003967285,
+                "cpu_percent": 82.6375,
+                "memory_mb": 373.859375,
+                "num_detections": 1
+            },
+            "GeminiAPI": {
+                "time_seconds": 0.5838320255279541,
+                "cpu_percent": 24.325,
+                "memory_mb": 374.75390625
+            },
+            "TotalProcessing": {
+                "time_seconds": 4.425924062728882
+            }
+        }
+    },
+    {
+        "image": "WhatsApp Image 2026-03-14 at 22.28.22 3.jpeg",
+        "measurements": {
+            "OCR": {
+                "time_seconds": 9.02018427848816,
+                "cpu_percent": 11.375,
+                "memory_mb": 354.875
+            },
+            "YOLO": {
+                "time_seconds": 0.1928880214691162,
+                "cpu_percent": 85.65,
+                "memory_mb": 397.3046875,
+                "num_detections": 0
+            },
+            "GeminiAPI": {
+                "time_seconds": 1.4850692749023438,
+                "cpu_percent": 9.7375,
+                "memory_mb": 400.30078125
+            },
+            "TotalProcessing": {
+                "time_seconds": 10.700144290924072
+            }
+        }
+    }
+]
