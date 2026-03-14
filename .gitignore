@@ -32,7 +32,5 @@ Thumbs.db
 *.sln
 *.sw?
 
-# Project specifics
-backend/python/inspection_log.json
-backend/python/uploads/
-backend/python/*.pt
+resources/
+Thesis Report.docx
